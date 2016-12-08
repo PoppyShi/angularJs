@@ -1,0 +1,11 @@
+{{}}取值
+ng-app 告诉AngularJS处理当前标签内的内容并引导应用
+ng-model 绑定了 HTML 表单元素到 scope 变量中,值为绑定到表单域的属性名
+ng-controller 添加控制器,在控制器中，制作函数和变量，并使用 scope作用域 对象来访问
+scope 一个作用域可以视作模板、模型和控制器协同工作的粘接器。
+		AngularJS使用作用域，同时还有模板中的信息，数据模型和控制器。json类型
+ng-repeat 迭代器  如: ng-repeat="phone in phones" phones可以从scope直接获取
+filter 	根据query输入的值,去模糊匹配迭代元素的所有属性
+		过滤器 <li ng-repeat="phone in phones | filter:query">
+orderBy 根据迭代元素的某个属性排序,$scope.orderProp 默认排序字段
+controller as 不再有$scope的注入了，感觉controller就是一个很简单的平面的JavaScript对象

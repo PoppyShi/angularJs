@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<meta charset="utf-8">
+<script src="../../js/angularJS/angular.min.js"></script>
+<script src="../../js/use/test2.js"></script>
+</head>
+<body ng-controller="PhoneListCtrl">
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span2">
+      <!--查询过滤-->
+      Search: <input ng-model="query">
+
+    </div>
+    <div class="span10">
+      <!--Body content-->
+
+      <ul class="phones">
+      	<!-- 过滤器 -->
+        <li ng-repeat="phone in phones | filter:query">
+          {{phone.name}}
+        <p>{{phone.snippet}}</p>
+        </li>
+      </ul>
+
+       </div>
+  </div>
+</div>
+</body>
+</html>
